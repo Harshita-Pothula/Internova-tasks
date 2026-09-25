@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 - Responsive Design</title>
+    <link rel="stylesheet" href="css/task5.css">
+</head>
+<body>
+
+    <!-- This bar changes its text using media queries -->
+    <div class="screen-indicator"></div>
+
+    <header class="site-header">
+        <div class="brand">Travel Diaries</div>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Explore the World</h1>
+            <p>Resize your browser window to see this page change for desktop, tablet and mobile screens.</p>
+        </div>
+        <img src="images/mountains.svg" alt="Illustration of mountains" class="hero-img">
+    </section>
+
+    <main class="container">
+        <h2 id="places">Popular Places</h2>
+        <div class="cards">
+            <article class="card">
+                <img src="images/beach.svg" alt="Beach illustration">
+                <div class="card-body">
+                    <h3>Beach</h3>
+                    <p>Sun, sand and calm waves.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="images/forest.svg" alt="Forest illustration">
+                <div class="card-body">
+                    <h3>Forest</h3>
+                    <p>Green trails and fresh air.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="images/city.svg" alt="City illustration">
+                <div class="card-body">
+                    <h3>City</h3>
+                    <p>Lights, food and culture.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="images/lake.svg" alt="Lake illustration">
+                <div class="card-body">
+                    <h3>Lake</h3>
+                    <p>Quiet mornings by the water.</p>
+                </div>
+            </article>
+        </div>
+
+        <h2 id="tips">What changes at each size</h2>
+        <table class="bp-table">
+            <thead>
+                <tr><th>Feature</th><th>Desktop (&gt;1024px)</th><th>Tablet (601-1024px)</th><th>Mobile (&le;600px)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Cards</td><td>4 columns</td><td>2 columns</td><td>1 column</td></tr>
+                <tr><td>Navigation</td><td>Right side, in a row</td><td>Right side, in a row</td><td>Stacked below logo</td></tr>
+                <tr><td>Hero</td><td>Text and image side by side</td><td>Text and image side by side</td><td>Image below text</td></tr>
+                <tr><td>Heading size</td><td>3rem</td><td>2.4rem</td><td>1.8rem</td></tr>
+                <tr><td>Spacing</td><td>Large padding</td><td>Medium padding</td><td>Small padding</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <p>&copy; 2026 Travel Diaries | Made by Harshita</p>
+    </footer>
+</body>
+</html>

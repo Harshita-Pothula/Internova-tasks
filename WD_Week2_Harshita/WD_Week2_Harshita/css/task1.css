@@ -1,0 +1,162 @@
+/* ===========================================
+   Task 1: CSS Syntax & Selectors
+   Syntax:  selector { property: value; }
+   =========================================== */
+
+/* ---------- Universal selector ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Element selectors ---------- */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #eef4f5;
+    color: #1d2b33;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #0f4c5c;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin: 0 0 12px 20px;
+}
+
+/* ---------- ID selectors ---------- */
+#page-header {
+    background-color: #0f4c5c;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#unique-text {
+    color: #b5651d;
+    font-weight: 600;
+}
+
+/* ---------- Class selectors ---------- */
+.subtitle {
+    color: #cfe6ea;
+    margin-top: 8px;
+}
+
+.container {
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(15, 76, 92, 0.12);
+}
+
+.highlight {
+    background-color: #f6d38b;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #5a6b73;
+}
+
+.code {
+    background-color: #1d2b33;
+    color: #d6eef2;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: Consolas, "Courier New", monospace;
+    overflow-x: auto;
+}
+
+/* ---------- Colors ---------- */
+.swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.swatch {
+    flex: 1 1 160px;
+    padding: 20px 12px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+}
+
+.named { background-color: teal; }
+.hex   { background-color: #e9a23b; }
+.rgb   { background-color: rgb(29, 95, 138); }
+.hsl   { background-color: hsl(140, 38%, 30%); }
+
+/* ---------- Backgrounds ---------- */
+.bg-demo {
+    padding: 28px 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bg-color {
+    background-color: #3b3f6b;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, #0f4c5c, #5fa8b5);
+}
+
+.bg-image {
+    background-image: url("../images/mountains.svg");
+    background-size: cover;
+    background-position: center;
+    min-height: 120px;
+}
+
+/* ---------- Font styling ---------- */
+.font-serif   { font-family: Georgia, "Times New Roman", serif; }
+.font-bold    { font-weight: 700; }
+.font-italic  { font-style: italic; }
+.font-big     { font-size: 1.4rem; }
+.font-spaced  { text-transform: uppercase; letter-spacing: 3px; }
+
+/* ---------- Text alignment ---------- */
+.align-left, .align-center, .align-right, .align-justify {
+    background-color: #eef4f5;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.align-left    { text-align: left; }
+.align-center  { text-align: center; }
+.align-right   { text-align: right; }
+.align-justify { text-align: justify; }
+
+/* ---------- Footer ---------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: #0f4c5c;
+    font-weight: 600;
+}
