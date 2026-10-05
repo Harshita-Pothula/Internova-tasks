@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 4: DOM Manipulation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1 id="page-title">Task 4: DOM Manipulation</h1>
+    <p><a href="index.html">Back to all tasks</a></p>
+  </header>
+  <main>
+    <p class="muted">Each button changes the page using JavaScript. Nothing reloads.</p>
+
+    <section class="card" aria-labelledby="select-title">
+      <h2 id="select-title">1. Selecting elements</h2>
+      <p>When the page loaded, JavaScript selected elements in four different ways:</p>
+      <ul id="selection-report"></ul>
+    </section>
+
+    <div class="grid">
+      <section class="card info-card" aria-labelledby="text-title">
+        <h2 id="text-title">2. Changing text</h2>
+        <p id="welcome-text">Hello, visitor!</p>
+        <button type="button" id="change-text-btn">Change text</button>
+      </section>
+
+      <section class="card info-card" aria-labelledby="html-title">
+        <h2 id="html-title">3. Changing HTML</h2>
+        <div id="course-details"><p>Course details are hidden.</p></div>
+        <button type="button" id="show-details-btn">Show course details</button>
+      </section>
+
+      <section class="card info-card" id="style-box" aria-labelledby="style-title">
+        <h2 id="style-title">4. Changing styles</h2>
+        <p>This card can change its colours and size.</p>
+        <button type="button" id="change-style-btn">Change style</button>
+        <button type="button" class="secondary" id="reset-style-btn">Reset</button>
+      </section>
+    </div>
+
+    <section class="card" aria-labelledby="list-title">
+      <h2 id="list-title">5 &amp; 6. Adding and removing elements</h2>
+      <label for="skill-input">New skill</label>
+      <input id="skill-input" type="text" placeholder="e.g. Git" maxlength="30">
+      <p id="skill-error" class="error"></p>
+      <button type="button" id="add-skill-btn">Add skill</button>
+      <button type="button" class="secondary" id="remove-last-btn">Remove last skill</button>
+      <ul id="skill-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="live-title">
+      <h2 id="live-title">7. Updating content dynamically</h2>
+      <p>Skills listed: <strong id="skill-count">3</strong></p>
+      <p>Current time: <strong id="clock">--:--:--</strong></p>
+      <p>Last change: <span id="last-change" class="muted">nothing yet</span></p>
+    </section>
+  </main>
+  <script src="js/task4_dom.js"></script>
+</body>
+</html>

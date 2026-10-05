@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 6: Student Record Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+  <header>
+    <h1>Student Record Manager</h1>
+    <p><a href="index.html">Back to all tasks</a></p>
+  </header>
+  <main>
+    <section class="stats" aria-label="Class summary">
+      <div class="stat"><span class="stat__label">Students</span><strong id="stat-count">0</strong></div>
+      <div class="stat"><span class="stat__label">Class average</span><strong id="stat-average">0%</strong></div>
+      <div class="stat"><span class="stat__label">Passed</span><strong id="stat-passed">0</strong></div>
+      <div class="stat"><span class="stat__label">Topper</span><strong id="stat-topper">-</strong></div>
+    </section>
+
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Add a student</h2>
+      <form id="student-form" novalidate>
+        <div class="form-row">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" maxlength="40" autocomplete="off">
+          </div>
+          <div>
+            <label for="roll">Roll number</label>
+            <input id="roll" type="text" maxlength="10" placeholder="e.g. 21CS045" autocomplete="off">
+          </div>
+        </div>
+        <div class="form-row form-row--marks">
+          <div>
+            <label for="maths">Maths</label>
+            <input id="maths" type="number" min="0" max="100">
+          </div>
+          <div>
+            <label for="science">Science</label>
+            <input id="science" type="number" min="0" max="100">
+          </div>
+          <div>
+            <label for="english">English</label>
+            <input id="english" type="number" min="0" max="100">
+          </div>
+        </div>
+        <p id="form-error" class="error" role="alert"></p>
+        <button type="submit" id="submit-btn">Add student</button>
+        <button type="button" class="secondary hidden" id="cancel-btn">Cancel edit</button>
+      </form>
+      <p id="message" class="success" role="status"></p>
+    </section>
+
+    <section class="card" aria-labelledby="list-title">
+      <h2 id="list-title">Records</h2>
+      <div class="controls">
+        <div>
+          <label for="search">Search by name or roll number</label>
+          <input id="search" type="search" placeholder="Start typing…">
+        </div>
+        <div>
+          <label for="grade-filter">Grade</label>
+          <select id="grade-filter">
+            <option value="all">All grades</option>
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F (fail)</option>
+          </select>
+        </div>
+        <div>
+          <label for="sort">Sort by</label>
+          <select id="sort">
+            <option value="roll">Roll number</option>
+            <option value="name">Name (A to Z)</option>
+            <option value="high">Highest % first</option>
+            <option value="low">Lowest % first</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="result-count" class="hint"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Roll</th>
+              <th scope="col">Name</th>
+              <th scope="col" class="num">Maths</th>
+              <th scope="col" class="num">Science</th>
+              <th scope="col" class="num">English</th>
+              <th scope="col" class="num">Total</th>
+              <th scope="col" class="num">%</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="student-rows"></tbody>
+        </table>
+      </div>
+      <p id="empty-message" class="muted hidden">No students match your search.</p>
+    </section>
+  </main>
+  <script src="js/task6_project.js"></script>
+</body>
+</html>

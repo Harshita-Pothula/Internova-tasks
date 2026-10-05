@@ -1,0 +1,31 @@
+/* Extra styles for the Student Record Manager */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.stat {
+  padding: 0.8rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+}
+.stat__label { display: block; color: var(--muted); font-size: 0.9rem; }
+.stat strong { font-size: 1.5rem; overflow-wrap: anywhere; }
+
+.form-row, .controls { display: grid; gap: 0 1rem; grid-template-columns: 1fr; }
+.form-row input, .controls input, .controls select { max-width: none; }
+@media (min-width: 640px) {
+  .form-row { grid-template-columns: 1fr 1fr; }
+  .form-row--marks { grid-template-columns: repeat(3, 1fr); }
+  .controls { grid-template-columns: 2fr 1fr 1fr; }
+}
+#student-form button { margin-top: 0.5rem; }
+
+tbody tr:hover { background: #fafbf8; }
+tr.just-changed { animation: flash 1.2s; }
+@keyframes flash { from { background: #fff3c4; } to { background: transparent; } }
+td.actions { white-space: nowrap; }
+td.actions button { min-height: 32px; padding: 0.2rem 0.7rem; font-size: 0.9rem; }

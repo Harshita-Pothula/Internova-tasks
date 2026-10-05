@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 5: Events</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Task 5: Events</h1>
+    <p><a href="index.html">Back to all tasks</a></p>
+  </header>
+  <main>
+    <p class="muted">Try each box. The page reacts to clicks, typing, choices, form submits, the mouse and the keyboard.</p>
+
+    <div class="grid">
+      <section class="card" aria-labelledby="click-title">
+        <h2 id="click-title">click</h2>
+        <p>This course has <strong id="like-count">0</strong> likes.</p>
+        <button type="button" id="like-btn">Like</button>
+        <button type="button" class="secondary" id="reset-likes-btn">Reset</button>
+      </section>
+
+      <section class="card" aria-labelledby="input-title">
+        <h2 id="input-title">input</h2>
+        <label for="bio">Short bio</label>
+        <input id="bio" type="text" maxlength="60" placeholder="Type something…">
+        <p class="hint"><span id="char-count">0</span> / 60 characters</p>
+        <p>Preview: <em id="bio-preview">(empty)</em></p>
+      </section>
+
+      <section class="card" aria-labelledby="change-title">
+        <h2 id="change-title">change</h2>
+        <label for="course-select">Favourite topic</label>
+        <select id="course-select">
+          <option value="">Choose one</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JavaScript">JavaScript</option>
+        </select>
+        <p id="course-message" class="muted">No topic chosen yet.</p>
+        <label><input type="checkbox" id="theme-check"> Use dark card colours</label>
+      </section>
+    </div>
+
+    <section class="card" aria-labelledby="submit-title">
+      <h2 id="submit-title">submit</h2>
+      <form id="feedback-form" novalidate>
+        <label for="fb-name">Your name</label>
+        <input id="fb-name" type="text" autocomplete="name">
+        <label for="fb-rating">Rating (1 to 5)</label>
+        <input id="fb-rating" type="number" min="1" max="5">
+        <p id="form-error" class="error" role="alert"></p>
+        <button type="submit">Send feedback</button>
+      </form>
+      <p id="form-result" class="success" role="status"></p>
+    </section>
+
+    <div class="grid">
+      <section class="card" id="hover-card" aria-labelledby="mouse-title">
+        <h2 id="mouse-title">Mouse events</h2>
+        <p id="hover-text">Move your mouse over this card.</p>
+        <p class="hint">Double-click this card to reset the counter. Mouse entered: <strong id="hover-count">0</strong> times.</p>
+        <p class="hint">Pointer position inside card: <span id="mouse-pos">-</span></p>
+      </section>
+
+      <section class="card" aria-labelledby="key-title">
+        <h2 id="key-title">Keyboard events</h2>
+        <p>Last key pressed anywhere on the page: <strong id="last-key">none</strong></p>
+        <label for="quick-note">Quick note (press Enter to save)</label>
+        <input id="quick-note" type="text" placeholder="Type and press Enter">
+        <ul id="note-list"></ul>
+      </section>
+    </div>
+  </main>
+  <script src="js/task5_events.js"></script>
+</body>
+</html>

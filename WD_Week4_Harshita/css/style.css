@@ -1,0 +1,87 @@
+/* Shared styles for all Week 4 pages */
+:root {
+  --ink: #1c1f22;
+  --muted: #545b63;
+  --paper: #f6f7f4;
+  --card: #ffffff;
+  --line: #d9dcd7;
+  --accent: #0b5394;
+  --accent-soft: #e6eef7;
+  --good: #1e6b3f;
+  --bad: #a3231b;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--paper);
+}
+header { background: var(--ink); color: #fff; padding: 1rem 1.25rem; }
+header a { color: #fff; }
+header p { margin: 0.25rem 0 0; color: #cfd3d6; }
+main { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+h1 { margin: 0; font-size: 1.6rem; }
+h2 { margin-top: 0; font-size: 1.25rem; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.25rem; margin-bottom: 1.25rem; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.muted { color: var(--muted); }
+.hint { color: var(--muted); font-size: 0.9rem; }
+
+button, .button {
+  display: inline-block;
+  min-height: 40px;
+  padding: 0.45rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+button.secondary { background: transparent; color: var(--accent); }
+button.danger { background: var(--bad); border-color: var(--bad); }
+button + button { margin-left: 0.4rem; }
+
+label { display: block; font-weight: 600; margin-top: 0.75rem; }
+input, select {
+  width: 100%;
+  max-width: 24rem;
+  min-height: 40px;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  border: 2px solid #8a9198;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Output panel used by Tasks 1-3 (results also go to the console) */
+.output { list-style: none; margin: 0; padding: 0; font-family: ui-monospace, Consolas, monospace; font-size: 0.92rem; }
+.output li { padding: 0.35rem 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; } /* long arrays wrap on small screens */
+.output .section { font-family: system-ui, sans-serif; font-weight: 700; color: var(--accent); padding-top: 1rem; border-bottom: 2px solid var(--accent); }
+.output .label { color: var(--muted); }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--line); }
+th { background: var(--accent-soft); }
+.num { text-align: right; }
+.table-wrap { overflow-x: auto; }
+
+.task-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+.task-list a { display: block; padding: 0.9rem 1rem; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; color: var(--ink); }
+.task-list a:hover { border-color: var(--accent); }
+.task-list strong { color: var(--accent); }
+
+.error { color: var(--bad); font-weight: 600; min-height: 1.5em; margin: 0.25rem 0 0; }
+.success { color: var(--good); font-weight: 600; }
+.highlight { background: #fff3c4; border-color: #e0b100; }
+.hidden { display: none; }
+.badge { display: inline-block; padding: 0.05rem 0.55rem; border-radius: 999px; font-weight: 700; font-size: 0.85rem; background: var(--accent-soft); color: var(--accent); }
+.badge.fail { background: #fbe6e5; color: var(--bad); }
