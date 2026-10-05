@@ -1,0 +1,477 @@
+/* ===========================================
+   Task 6: Mini CSS Project - Portfolio
+   Uses: selectors, box model, flexbox, grid,
+         responsive design & media queries
+   =========================================== */
+
+/* ---------- Reset (universal selector) ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1d2b33;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #0f4c5c;
+}
+
+/* ---------- Header (flexbox) ---------- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(15, 76, 92, 0.08);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f4c5c;
+    text-decoration: none;
+}
+
+.dot {
+    color: #e9a23b;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1d2b33;
+}
+
+.nav a:hover {
+    color: #e9a23b;
+}
+
+.nav .nav-btn {
+    background-color: #0f4c5c;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
+
+.nav .nav-btn:hover {
+    background-color: #1d5f8a;
+    color: #ffffff;
+}
+
+/* ---------- Hero (flexbox) ---------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 80px 8%;
+    background-color: #eef4f5;
+}
+
+.hero-text {
+    flex: 1 1 55%;
+}
+
+.hello {
+    color: #b5651d;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    color: #0f4c5c;
+    margin-bottom: 16px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    flex: 0 1 320px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    box-shadow: 0 16px 40px rgba(15, 76, 92, 0.2);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid #0f4c5c;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background-color: #0f4c5c;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1d5f8a;
+    border-color: #1d5f8a;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #0f4c5c;
+}
+
+.btn-outline:hover {
+    background-color: #0f4c5c;
+    color: #ffffff;
+}
+
+/* ---------- Sections (box model) ---------- */
+.section {
+    padding: 72px 8%;
+}
+
+.section-alt {
+    background-color: #eef4f5;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #0f4c5c;
+    margin-bottom: 32px;
+    padding-bottom: 8px;
+    border-bottom: 4px solid #e9a23b;
+    display: inline-block;
+}
+
+.about {
+    max-width: 720px;
+    font-size: 1.1rem;
+}
+
+.about p + p {
+    margin-top: 14px;
+}
+
+/* ---------- Skills (grid) ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.skill {
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(15, 76, 92, 0.1);
+}
+
+.skill h3 {
+    color: #0f4c5c;
+    margin-bottom: 4px;
+}
+
+.skill p {
+    font-size: 0.95rem;
+    color: #5a6b73;
+    margin-bottom: 14px;
+}
+
+.bar {
+    height: 8px;
+    background-color: #d8e6e9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    display: block;
+    height: 100%;
+    background-color: #e9a23b;
+    border-radius: 4px;
+}
+
+.fill-90 { width: 90%; }
+.fill-75 { width: 75%; }
+.fill-70 { width: 70%; }
+.fill-65 { width: 65%; }
+
+/* ---------- Projects (grid) ---------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.project {
+    border: 1px solid #dbe7ea;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(15, 76, 92, 0.08);
+}
+
+.project img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: cover;
+    background-color: #1f4e79;
+}
+
+.project-body {
+    padding: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #fdf0d5;
+    color: #b5651d;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.project h3 {
+    color: #0f4c5c;
+    margin-bottom: 6px;
+}
+
+.project p {
+    color: #5a6b73;
+    margin-bottom: 10px;
+}
+
+.project a {
+    font-weight: 700;
+}
+
+/* ---------- Timeline (flexbox) ---------- */
+.timeline {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.step {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border-top: 5px solid #d8e6e9;
+}
+
+.step.done {
+    border-top-color: #0f4c5c;
+}
+
+.week {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #b5651d;
+}
+
+.step h3 {
+    color: #0f4c5c;
+    margin: 4px 0;
+}
+
+/* ---------- Contact form ---------- */
+.contact-form {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 18px;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-weight: 600;
+}
+
+.field input,
+.field textarea {
+    padding: 12px 14px;
+    border: 2px solid #d8e6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #0f4c5c;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 24px 8%;
+    background-color: #0f4c5c;
+    color: #ffffff;
+}
+
+.footer a {
+    color: #e9a23b;
+    font-weight: 600;
+}
+
+/* ===========================================
+   TABLET (1024px and below)
+   =========================================== */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .section {
+        padding: 56px 6%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===========================================
+   MOBILE (600px and below)
+   =========================================== */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 5%;
+    }
+
+    .nav {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 5%;
+        gap: 28px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        margin: 0 auto 24px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        flex-basis: auto;
+        width: 180px;
+    }
+
+    .section {
+        padding: 44px 5%;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline,
+    .form-row {
+        flex-direction: column;
+    }
+
+    .contact-form .btn {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

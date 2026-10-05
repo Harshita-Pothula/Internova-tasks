@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - CSS Box Model</title>
+    <link rel="stylesheet" href="css/task2.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Task 2: CSS Box Model &amp; Styling</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>The Box Model</h2>
+            <p>Every HTML element is a box made of four layers: content, padding, border and margin.</p>
+
+            <!-- Visual diagram built only with nested boxes -->
+            <div class="bm-margin">
+                <span class="bm-label">Margin</span>
+                <div class="bm-border">
+                    <span class="bm-label">Border</span>
+                    <div class="bm-padding">
+                        <span class="bm-label">Padding</span>
+                        <div class="bm-content">Content<br>300 &times; 80</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Box Model Properties</h2>
+            <div class="box-row">
+                <div class="box box-size">
+                    <h3>Width &amp; Height</h3>
+                    <p>width: 220px<br>height: 160px</p>
+                </div>
+                <div class="box box-padding">
+                    <h3>Padding</h3>
+                    <p>padding: 30px<br>Space inside the border</p>
+                </div>
+                <div class="box box-border">
+                    <h3>Border</h3>
+                    <p>border: 4px dashed<br>The line around the box</p>
+                </div>
+                <div class="box box-radius">
+                    <h3>Border Radius</h3>
+                    <p>border-radius: 24px<br>Rounded corners</p>
+                </div>
+                <div class="box box-shadow">
+                    <h3>Box Shadow</h3>
+                    <p>box-shadow: 0 8px 20px<br>Soft depth</p>
+                </div>
+                <div class="box box-margin">
+                    <h3>Margin</h3>
+                    <p>margin-top: 30px<br>Space outside the box</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Profile Card (all properties together)</h2>
+            <div class="profile-card">
+                <img src="images/profile.svg" alt="Profile avatar" class="avatar">
+                <h3>Harshita</h3>
+                <p class="role">Web Development Intern</p>
+                <p>This card is centered using margin: auto and its content is centered using text-align.</p>
+                <a href="index.html" class="btn">Back to Home</a>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

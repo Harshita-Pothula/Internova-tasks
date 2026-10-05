@@ -1,0 +1,169 @@
+/* ===========================================
+   Task 3: Flexbox Layout
+   =========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #eef4f5;
+    color: #1d2b33;
+}
+
+/* ---------- Navbar: flex container ---------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: #0f4c5c;
+    padding: 16px 28px;
+}
+
+.logo {
+    color: #e9a23b;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #e9a23b;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.container h1 {
+    color: #0f4c5c;
+    margin-bottom: 20px;
+}
+
+.section {
+    background-color: #ffffff;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15, 76, 92, 0.1);
+}
+
+.section h2 {
+    color: #0f4c5c;
+    margin-bottom: 12px;
+}
+
+.section h3 {
+    font-size: 0.95rem;
+    color: #5a6b73;
+    margin: 14px 0 6px;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* ---------- Flex container & items ---------- */
+.flex-container {
+    display: flex;
+    gap: 10px;
+    background-color: #eef4f5;
+    border: 2px dashed #9cc9e8;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item {
+    background-color: #1d5f8a;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.item.big {
+    padding: 34px 20px;
+    background-color: #e9a23b;
+}
+
+.item.wide {
+    padding: 16px 28px;
+}
+
+/* Flex direction */
+.row    { flex-direction: row; }
+.column { flex-direction: column; }
+
+/* Justify content */
+.jc-start   { justify-content: flex-start; }
+.jc-center  { justify-content: center; }
+.jc-between { justify-content: space-between; }
+.jc-around  { justify-content: space-around; }
+
+/* Align items */
+.tall      { height: 140px; }
+.ai-start  { align-items: flex-start; }
+.ai-center { align-items: center; }
+.ai-end    { align-items: flex-end; }
+
+.align-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.align-grid > div {
+    flex: 1 1 250px;
+}
+
+.perfect-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- Responsive cards ---------- */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 14px;
+}
+
+.card {
+    flex: 1 1 220px;
+    background-color: #fdf4e3;
+    border-top: 5px solid #e9a23b;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: #0f4c5c;
+    margin: 0 0 6px;
+}
+
+/* On small screens, stack the navbar */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
