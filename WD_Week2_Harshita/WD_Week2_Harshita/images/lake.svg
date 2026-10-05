@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
-  <rect width="400" height="300" fill="#9cc9e8"/>
-  <polygon points="0,300 120,140 220,260 300,170 400,300" fill="#1d5f8a"/>
-  <circle cx="320" cy="70" r="30" fill="#ffffff" opacity="0.8"/>
-  <text x="24" y="48" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">Lake</text>
-</svg>
